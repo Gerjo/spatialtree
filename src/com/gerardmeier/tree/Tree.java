@@ -41,9 +41,9 @@ public class Tree {
     }
 
 
-    // Visit spaces by a set heuristic, great for collision detection.
-    public void accept(Criterion heuristic, SpaceVisitor visitor) {
-        for(Space space : getAllSpaces(heuristic)) {
+    // Visit spaces by a set criterion, great for collision detection.
+    public void accept(Criterion criterion, SpaceVisitor visitor) {
+        for(Space space : getAllSpaces(criterion)) {
             if(!visitor.visit(space)) {
                 // Premature halt, the visitor returned "false". TODO:
                 // visit the tree directly rather than via "getSpaceAt".
@@ -63,9 +63,9 @@ public class Tree {
         return spaces;
     }
 
-    public ArrayList<Space> getAllSpaces(final Criterion heuristic) {
+    public ArrayList<Space> getAllSpaces(final Criterion criterion) {
         final ArrayList<Space> spaces = new ArrayList<Space>();
-        root.getAllSpaces(spaces, heuristic);
+        root.getAllSpaces(spaces, criterion);
         return spaces;
     }
 

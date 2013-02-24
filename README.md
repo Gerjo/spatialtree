@@ -9,7 +9,7 @@ Usage excerpt, assumes the "tree" member has been initialized elsewhere, and all
 public Route findPath(Vector startPos, Vector goalPos) {
     Route path = new Route(Route.State.IMPOSSIBLE);
 
-    Criteron criterion = new Criterion();
+    Criterion criterion = new Criterion();
     criterion.minimalSize = 10;
     criterion.maximalSize = 20;
     criterion.minimalEntities = 0;

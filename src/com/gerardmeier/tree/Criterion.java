@@ -1,5 +1,4 @@
 
-
 package com.gerardmeier.tree;
 
 
@@ -29,6 +28,6 @@ public class Criterion {
 
     @Override
     public String toString() {
-        return "[Heuristic: Size: " + minimalSize + "-" + maximalSize + ", entities: " + minimalEntities + "-" + maximalEntities + "]";
+        return "[Criterion: Size: " + minimalSize + "-" + maximalSize + ", entities: " + minimalEntities + "-" + maximalEntities + "]";
     }
 }
